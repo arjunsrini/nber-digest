@@ -1,0 +1,12 @@
+# current data files
+*.txt
+*.html
+
+# potential dataset types
+*.csv
+*.json
+*.xlsx
+*.xls
+
+# misc
+*.DS_Store

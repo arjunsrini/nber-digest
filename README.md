@@ -1,2 +1,3 @@
 # nber-digest
-fetch all new nber working paper metadata
+
+beginnings of an app/api/somethign that fetches/stores/creates a feed of relevant nber working paper abstracts
