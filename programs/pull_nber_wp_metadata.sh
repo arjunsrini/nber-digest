@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# pull_nber_wps.sh
+# pull_nber_wp_metadata.sh
 #
 # 	shell scripts that defines functions necessary to extract relevant working paper data
 # 
@@ -91,4 +91,33 @@ get_range_of_papers () {
 
 
 
-# get_range_of_papers $wpnum_start $wpnum_end "../data/docs"
+# fetch_metadata_for_wp_list
+# 
+# 	given a list of nber working paper numbers, fetch metadata for each
+#
+# parameters:
+# 	1 path to input
+# 	2 path to output 
+# 
+# returns:
+# 	NA
+#
+# output:
+# 	saves paper metadata to file path (arg 2)
+#
+fetch_metadata_for_wp_list () {
+
+	local wp_list=$1
+	local dir_out=$2
+
+	while read in; do
+	    get_paper_metadata $in "$dir_out/${in}.txt"
+	done < $wp_list
+
+}
+
+
+
+fetch_metadata_for_wp_list "./wp_nums.txt" "../data/docs"
+
+# get_range_of_papers $wpnum_start $wpnum_end 

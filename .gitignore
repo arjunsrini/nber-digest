@@ -1,3 +1,6 @@
+# secrets
+*.env
+
 # current data files
 *.txt
 *.html
@@ -8,5 +11,10 @@
 *.xlsx
 *.xls
 
+# ipynb testing
+*.ipynb
+programs/.ipynb_checkpoints/
+
 # misc
 *.DS_Store
+
